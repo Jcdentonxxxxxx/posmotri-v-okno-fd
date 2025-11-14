@@ -92,6 +92,7 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 1;
+  margin-bottom: 5px;
 }
 
 .search-form__checkbox-list {
@@ -122,7 +123,7 @@ ol {
   font-size: inherit;  
   background-color: transparent;
   font-family: inherit;
-  padding: 2.5px 0;
+  padding: 3px 0;
   min-width: 225px;
   letter-spacing: 0;
 }
@@ -212,7 +213,7 @@ ol {
 
 .content__list-container {
   height: 298px;  
-  overflow: hidden scroll;
+  overflow: hidden auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -284,10 +285,15 @@ ol {
 
 
 .content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   text-transform: uppercase;
+  margin-bottom: 6px;
 }
 
 .content__video-card-description {
