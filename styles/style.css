@@ -67,7 +67,7 @@ ol {
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
-  
+  position: relative;
 }
 
 .result__video {  
@@ -135,6 +135,71 @@ ol {
   outline: none;
 }
 
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  padding: 1px;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox:after {
+  opacity: 1;
+}
+
+.search-form__label:hover > .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__label:hover:not(:has(.search-form__textfield)) {
+  cursor: pointer;
+}
+
+.button {
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  background-color: transparent;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: #fff solid 1px;
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
+  min-width: 194px;
+}
+
+.more-button {
+  width: 100%;
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -151,6 +216,8 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 3px 4px;
+  position: relative;
 }
 
 .content__details {
@@ -178,14 +245,36 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: #fff;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: #fff solid 1px;
 }
 
 .content__video-card {
   display: flex;
   align-items: flex-start;
-  max-width: 395px;
+  width: 387px;
 }
 
 .content__video-card-description-container {  
